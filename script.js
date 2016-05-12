@@ -1,5 +1,7 @@
 'use strict';
 
+var red = 25;
+var blue = 150;
 
 var body = document.body;
 for (var i = 0; i < 81; i++){
@@ -8,8 +10,12 @@ for (var i = 0; i < 81; i++){
   newDiv.style.width = "11.1%";
   newDiv.style.cssFloat = "left";
   newDiv.style.paddingBottom = "11.1%";
-  var red = Math.floor(Math.random() * 256);
-  var green = Math.floor(Math.random() * 256);
-  var blue = Math.floor(Math.random() * 256);
+  red += 3;
+  if (i % 2 == 0) {
+    var green = 100;
+  }
+  else {
+    var green = 130;
+  }
   newDiv.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
 }
